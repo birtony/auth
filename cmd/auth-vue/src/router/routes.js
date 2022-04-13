@@ -20,10 +20,4 @@ export default [
     name: 'SignUp',
     component: load('SignUp'),
   },
-  // will match everything and put it under `$route.params.pathMatch`
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: load('NotFound'),
-  },
 ];

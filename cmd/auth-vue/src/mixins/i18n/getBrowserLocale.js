@@ -22,5 +22,7 @@ export default function getBrowserLocale(options = {}) {
     ? navigatorLocale.trim().split(/-|_/)[0]
     : navigatorLocale.trim();
 
+  console.log('browser locale', trimmedLocale);
+
   return trimmedLocale;
 }

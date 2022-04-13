@@ -11,7 +11,7 @@ import { loadI18nMessages } from '@/plugins/i18n';
 import { useI18n } from 'vue-i18n';
 const i18n = useI18n();
 // TODO: investigate why adding await prevents UI from rendering. Reference: https://vuejs.org/api/sfc-script-setup.html#top-level-await
-loadI18nMessages(i18n, i18n.locale.value);
+// loadI18nMessages(i18n, i18n.locale.value);
 </script>
 
 <template>

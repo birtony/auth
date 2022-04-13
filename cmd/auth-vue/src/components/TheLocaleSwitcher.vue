@@ -22,6 +22,7 @@ const newLocale = computed(() =>
 const handleLocaleSwitch = async (newLocale) => {
   if (i18n.locale !== newLocale.id) {
     await updateI18nLocale(i18n, newLocale.id);
+    console.log('router', router);
     router.replace({
       name: route.name.value,
       params: {

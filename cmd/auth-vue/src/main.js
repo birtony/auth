@@ -11,7 +11,7 @@ import { setupI18n } from '@/plugins/i18n';
 import '@/tailwind.css';
 import TheToastNotification from '@/components/TheToastNotification.vue';
 
-const i18n = setupI18n();
+export const i18n = setupI18n();
 
 const app = createApp({
   ...App,

@@ -9,8 +9,9 @@ import { createI18n } from 'vue-i18n';
 import { setDocumentLang, setDocumentTitle } from '@/mixins/i18n/document';
 import getStartingLocale from '@/mixins/i18n/getStartingLocale';
 
+const startingLocale = getStartingLocale();
+
 export function setupI18n() {
-  const startingLocale = getStartingLocale();
   setDocumentLang(startingLocale.id);
   const i18n = createI18n({
     legacy: false,
@@ -30,7 +31,8 @@ export async function loadI18nMessages(i18n, locale) {
 
 // This function updates i18n locale, loads new locale's messages and sets document properties accordingly
 export async function updateI18nLocale(i18n, newLocale) {
-  if (i18n?.availableLocales.length > 0 && i18n.locale === newLocale) {
+  console.log('i18n', i18n);
+  if (i18n.availableLocales.length > 0 && i18n.locale === newLocale) {
     return nextTick();
   }
 
